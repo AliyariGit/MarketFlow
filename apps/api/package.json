@@ -1,0 +1,21 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/src/functions/*.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "func start --port 7071",
+    "test": "vitest run",
+    "dev": "func start --port 7071"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.7.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

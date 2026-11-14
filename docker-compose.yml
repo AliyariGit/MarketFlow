@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: marketflow-postgres
+    environment:
+      POSTGRES_DB: marketflow
+      POSTGRES_USER: marketflow
+      POSTGRES_PASSWORD: marketflow
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

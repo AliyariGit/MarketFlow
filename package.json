@@ -1,0 +1,16 @@
+{
+  "name": "marketflow",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm --prefix apps/web run build && npm --prefix apps/api run build",
+    "test": "npm --prefix apps/web run test -- --run && npm --prefix apps/api run test -- --run"
+  },
+  "devDependencies": {
+    "@fluentui/react-icons": "^2.0.345"
+  }
+}
